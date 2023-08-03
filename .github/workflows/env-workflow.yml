@@ -20,4 +20,4 @@ jobs:
         uses: actions/checkout@v2
       - name: Run Ansible Playbook
         run: |
-          ansible-playbook src/ansible/main.yml -e '{"env":"'${{ secrets.hello_world }}'"}'
+          ansible-playbook src/ansible/main.yml -e '{"env":"'${{ env.hello }}'"}'
