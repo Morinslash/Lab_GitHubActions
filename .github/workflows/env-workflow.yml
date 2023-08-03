@@ -4,6 +4,7 @@ on:
   workflow_dispatch: 
     inputs: 
       environment:
+        type: choice
         description: "Where to apply"
         required: true
         options:
