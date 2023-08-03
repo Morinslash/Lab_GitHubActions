@@ -3,12 +3,12 @@
 on: 
   workflow_dispatch: 
     inputs: 
-      name: environment
-      description: "Where to apply"
-      required: true
-      options:
-        - dev
-        - prod
+      environment:
+        description: "Where to apply"
+        required: true
+        options:
+          - dev
+          - prod
 
 jobs: 
   exectue:
