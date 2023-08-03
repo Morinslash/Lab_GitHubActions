@@ -1,6 +1,11 @@
 ﻿- name: Test Config
   hosts: localhost
+  var_files:
+    - ./hello.{{ env }}.yml
   tasks:
-    - name: Print database names
+    - name: Print from variable file
       debug:
-        var: env
+        var: hello    
+    - name: Print from GitHub variable
+      debug:
+        var: github_input
