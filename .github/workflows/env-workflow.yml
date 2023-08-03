@@ -14,9 +14,10 @@ on:
 jobs: 
   exectue:
     runs-on: ubuntu-latest
+    environment: environment
     steps:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Run Ansible Playbook
         run: |
-          ansible-playbook src/ansible/main.yml -e '{"env":"'{{ github.event.inputs.environment }}'"}'
+          ansible-playbook src/ansible/main.yml -e '{"env":"'{{ secrets.hello_world }}'"}'
