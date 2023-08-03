@@ -1,6 +1,6 @@
 ﻿- name: Test Config
   hosts: localhost
-  var_files:
+  vars_files:
     - ./hello.{{ env }}.yml
   tasks:
     - name: Print from variable file
