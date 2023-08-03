@@ -14,7 +14,7 @@ on:
 jobs: 
   exectue:
     runs-on: ubuntu-latest
-    environment: environment
+    environment: ${{ github.event.inputs.environment }}
     steps:
       - name: Checkout
         uses: actions/checkout@v2
